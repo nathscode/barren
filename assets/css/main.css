@@ -108,13 +108,13 @@ body {
 
 html ::-moz-selection,
 body ::-moz-selection {
-  background-color: #4c7750;
+  background-color: #305f65;
   color: #fff;
 }
 
 html ::selection,
 body ::selection {
-  background-color: #4c7750;
+  background-color: #305f65;
   color: #fff;
 }
 
@@ -130,7 +130,7 @@ body ::selection {
 }
 
 .navbar-green {
-  background-color: #4c7750;
+  background-color: #305f65;
 }
 
 .navbar-brand {
@@ -142,7 +142,7 @@ body ::selection {
 .navbar-brand img {
   max-width: 100%;
   position: absolute;
-  top: 30px;
+  top: 5px;
 }
 
 .nav-item a.nav-link {
@@ -198,13 +198,14 @@ body ::selection {
 
 @media screen and (max-width: 500px) {
   .banner__info--logo img {
-    height: 50px;
+    height: 80px;
   }
 }
 
 .banner__info--content {
+  margin-top: 20px;
   max-width: 50rem;
-  background-color: #4c7750;
+  background-color: #305f65;
   padding: 1rem 2rem;
   color: #fff;
   position: relative;
@@ -230,7 +231,7 @@ body ::selection {
 }
 
 .banner__info--content .title {
-  background-color: #4c7750;
+  background-color: #305f65;
   position: relative;
   top: -20px;
   width: auto;
@@ -292,6 +293,12 @@ body ::selection {
   position: relative;
 }
 
+@media screen and (max-width: 500px) {
+  .slider {
+    height: 200px;
+  }
+}
+
 .slider .slider-one {
   position: absolute;
   left: 120px;
@@ -321,14 +328,22 @@ body ::selection {
 
 .slider .slider-item {
   background-color: #DFB384;
-  width: 55rem;
   z-index: 3;
   border-radius: 10px 40px 40px 10px;
 }
 
-.slider .slider-item video,
-.slider .slider-item img {
-  width: 100%;
+@media screen and (max-width: 1180px) {
+  .slider div.slider-item video {
+    width: 55vh;
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 801px) {
+  .slider div.slider-item video {
+    width: 40vh;
+    height: auto;
+  }
 }
 
 .troops {
@@ -644,7 +659,14 @@ body ::selection {
   position: relative;
 }
 
-.knowledge__card--text .number {
+.knowledge__card--text h3 {
+  width: 300px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Kameron", serif;
+  font-size: 1.5rem;
+}
+
+.knowledge__card .number {
   width: 30px;
   height: 30px;
   background-color: #fff;
@@ -655,23 +677,30 @@ body ::selection {
   position: absolute;
 }
 
-.knowledge__card--text .number.right {
+.knowledge__card .number.right {
   border-radius: 50% 50% 50% 0%;
   right: 0;
   top: 40px;
 }
 
-.knowledge__card--text .number.left {
+@media screen and (max-width: 500px) {
+  .knowledge__card .number.right {
+    right: 33px;
+  }
+}
+
+.knowledge__card .number.left {
   border-radius: 50% 50% 0% 50%;
-  left: -14px;
+  left: 5px;
   top: 35px;
 }
 
-.knowledge__card--text h3 {
-  width: 300px;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "Kameron", serif;
-  font-size: 1.5rem;
+@media screen and (max-width: 500px) {
+  .knowledge__card .number.new-left {
+    border-radius: 50% 50% 0% 50%;
+    right: 33px !important;
+    top: 35px;
+  }
 }
 
 footer {
